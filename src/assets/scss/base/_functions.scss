@@ -1,0 +1,150 @@
+/***************************/
+/******** DEV TOOLS ********/
+/***************************/
+
+//shadow insert
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -moz-box-shadow: inset $top $left $blur $spread $color;
+    box-shadow: inset $top $left $blur $spread $color;
+  } @else {
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
+}
+
+/***************************/
+/**** FLEXBOX FUNCTIONS ****/
+/***************************/
+
+/** Flexbox container functions **/
+/*********************************/
+
+//master flexbox container function
+@mixin flexbox($direction: row wrap, $justify-content: flex-start, $align-items: center, $align-content: flex-start) {
+  //initial flexbox call
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex;
+
+  //flexflow
+  flex-flow: $direction;
+
+  //justify content
+  @include justify-content($justify-content);
+
+  //align items
+  @include align-items($align-items);
+
+  //align content
+  @include align-content($align-content);
+}
+
+//justify content
+@mixin justify-content($value) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+  } @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+  }
+
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+//align items
+@mixin align-items($value) {
+  @if $value == flex-start {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -moz-box-align: $value;
+  }
+
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+
+//align content
+@mixin align-content($value) {
+  -webkit-align-content: $value;
+  align-content: $value;
+}
+
+/** Flexbox item functions **/
+/****************************/
+
+//flex item master function
+@mixin flex-item($grow: 0, $shrink: 0, $basis: auto, $align-self: auto, $order: 0) {
+  -webkit-flex: $grow $shrink $basis;
+  flex: $grow $shrink $basis;
+
+  //align-self
+  @if ($align-self != auto) {
+    @include align-self($align-self);
+  }
+
+  //order
+  @if ($order != 0) {
+    @include order($order);
+  }
+}
+
+//align-self
+@mixin align-self($value) {
+  // No Webkit Box Fallback.
+  -webkit-align-self: $value;
+  align-self: $value;
+}
+
+//order
+@mixin order($int: 0) {
+  -webkit-box-ordinal-group: $int + 1;
+  -moz-box-ordinal-group: $int + 1;
+  -webkit-order: $int;
+  order: $int;
+}
+
+/***************************/
+/******** KEYFRAMES ********/
+/***************************/
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes grow-from-right {
+  0% {
+    transform: translateX(50rem);
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes slider-fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

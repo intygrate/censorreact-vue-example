@@ -1,0 +1,63 @@
+//intygrate logo
+.intygrate-logo__part1 {
+  fill: $p-colour2;
+}
+.intygrate-logo__part2 {
+  fill: #4d3c2a;
+}
+.intygrate-logo__part3 {
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  isolation: isolate;
+}
+.intygrate-logo__part4 {
+  fill: url(#linear-gradient);
+}
+.intygrate-logo__part5 {
+  fill: url(#linear-gradient-2);
+}
+.intygrate-logo__part6 {
+  fill: url(#linear-gradient-3);
+}
+.intygrate-logo__part7 {
+  fill: url(#linear-gradient-4);
+}
+.intygrate-logo__part8 {
+  fill: url(#linear-gradient-5);
+}
+.intygrate-logo__part9 {
+  fill: url(#linear-gradient-6);
+}
+.intygrate-logo__part10 {
+  fill: url(#linear-gradient-7);
+}
+.intygrate-logo__part11 {
+  fill: url(#linear-gradient-8);
+}
+.intygrate-logo__part12 {
+  fill: url(#linear-gradient-9);
+}
+
+//censorREACT logo
+.censorreact-logo__part1 {
+  fill: #0f3c62;
+}
+.censorreact-logo__part2 {
+  fill: $s-colour6;
+}
+
+//seoREACT logo
+.seoreact-logo__part1 {
+  fill: #0f3c62;
+}
+.seoreact-logo__part2 {
+  fill: #9faccd;
+}
+
+//fuseREACT logo
+.fusereact-logo__part1 {
+  fill: #0f3c62;
+}
+.fusereact-logo__part2 {
+  fill: #1f9dd9;
+}

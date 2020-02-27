@@ -1,0 +1,442 @@
+/*****************************/
+/******* Common Icons ********/
+/*****************************/
+
+//return to top arrow
+.return-top__part1 {
+  fill: #4b4b4b;
+}
+
+.return-top__part2,
+.return-top__part3 {
+  fill: none;
+}
+
+.return-top__part3 {
+  stroke: white;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+/*****************************/
+/***** Social Media Icons ****/
+/*****************************/
+
+//styles for github, linkedIn, medium and twitter
+//one comon style as they are only used together
+.social-media__icon {
+  &--dark:hover {
+    .social-icon {
+      fill: $grey2;
+    }
+  }
+
+  .social-icon {
+    fill: $grey3;
+  }
+}
+
+/*****************************/
+/* Intygrate Services Icons **/
+/*****************************/
+
+//erp consultancy icon
+.erp-icon__part1 {
+  clip-path: url(#clip-ERP_icon);
+}
+.erp-icon__part2 {
+  fill: none;
+}
+.erp-icon__part3 {
+  isolation: isolate;
+}
+.erp-icon__part4,
+.erp-icon__part6 {
+  fill: #fff;
+}
+.erp-icon__part5,
+.erp-icon__part6 {
+  stroke: none;
+}
+
+//software development icon
+.sd-icon__part1 {
+  clip-path: url(#clip-SD_icon);
+}
+.sd-icon__part2 {
+  fill: none;
+}
+.sd-icon__part3 {
+  isolation: isolate;
+}
+.sd-icon__part4,
+.sd-icon__part6 {
+  fill: #fff;
+}
+.sd-icon__part5,
+.sd-icon__part6 {
+  stroke: none;
+}
+
+//aws consultancy icon
+.aws-icon__part1 {
+  clip-path: url(#clip-AWS_icon);
+}
+.aws-icon__part2 {
+  fill: none;
+}
+.aws-icon__part3 {
+  isolation: isolate;
+}
+.aws-icon__part4,
+.aws-icon__part6 {
+  fill: #fff;
+}
+.aws-icon__part5,
+.aws-icon__part6 {
+  stroke: none;
+}
+
+/*****************************/
+/******* Contact Icons *******/
+/*****************************/
+
+//envelope icon
+.envelope-icon {
+  fill: none;
+  stroke: #b1b0af;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+//house icon
+.house-icon__part1,
+.house-icon__part2 {
+  fill: none;
+  stroke: #b1b0af;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+.house-icon__part2 {
+  stroke-linecap: round;
+}
+
+//phone icon
+.phone-icon {
+  fill: none;
+  stroke: #b1b0af;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+/*****************************/
+/***** censorREACT Icons *****/
+/*****************************/
+
+//text verification
+.cr-text-part1,
+.cr-text-part2,
+.cr-text-part3 {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.cr-text-part1 {
+  stroke-linejoin: round;
+}
+
+.cr-text-part3 {
+  stroke-linecap: round;
+}
+
+//image moderation
+.cr-image-part1,
+.cr-image-part2,
+.cr-image-part3 {
+  fill: none;
+  stroke-width: 2px;
+}
+
+.cr-image-part1,
+.cr-image-part2 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+}
+
+.cr-image-part1,
+.cr-image-part3 {
+  stroke-linejoin: round;
+}
+
+.cr-image-part2 {
+  stroke-linecap: round;
+}
+
+.cr-image-part3 {
+  stroke: #fffdfd;
+}
+
+//content quality
+.content-quality__part1,
+.content-quality__part2,
+.content-quality__part3,
+.content-quality__part5 {
+  fill: none;
+}
+
+.content-quality__part1,
+.content-quality__part2,
+.content-quality__part3 {
+  stroke: #fff;
+}
+
+.content-quality__part1,
+.content-quality__part3,
+.content-quality__part4,
+.content-quality__part5 {
+  stroke-miterlimit: 10;
+}
+
+.content-quality__part1,
+.content-quality__part2,
+.content-quality__part3,
+.content-quality__part4,
+.content-quality__part5 {
+  stroke-width: 2px;
+}
+
+.content-quality__part3,
+.content-quality__part5 {
+  stroke-linecap: round;
+}
+
+.content-quality__part4 {
+  fill: #2cbdf2;
+}
+
+.content-quality__part4,
+.content-quality__part5 {
+  stroke: #002f50;
+}
+
+//user trust
+.user-trust__part1,
+.user-trust__part2 {
+  fill: none;
+}
+
+.user-trust__part1,
+.user-trust__part3,
+.user-trust__part4 {
+  stroke: #fff;
+}
+
+.user-trust__part1,
+.user-trust__part2,
+.user-trust__part3,
+.user-trust__part4 {
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.user-trust__part2 {
+  stroke: #b1b0af;
+}
+
+.user-trust__part3 {
+  fill: #333;
+}
+
+.user-trust__part3,
+.user-trust__part4 {
+  stroke-linejoin: round;
+}
+
+.user-trust__part4 {
+  fill: #ffdd03;
+}
+
+//kids & community
+.kids-community__part1 {
+  fill: none;
+}
+
+.kids-community__part1,
+.kids-community__part2 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.kids-community__part2 {
+  fill: $s-colour2;
+}
+
+//click icon for sign up
+.click__part1 {
+  fill: #ffdd03;
+}
+
+.click__part2,
+.click__part5 {
+  fill: #fff;
+}
+
+.click__part2,
+.click__part3,
+.click__part4,
+.click__part5 {
+  stroke: #333;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.click__part3,
+.click__part4 {
+  fill: none;
+}
+
+.click__part3,
+.click__part5 {
+  stroke-linecap: round;
+}
+
+//documentation icon
+.documentation__part1 {
+  fill: #fff;
+  stroke: $s-colour2;
+}
+
+.documentation__part1,
+.documentation__part2 {
+  stroke-linejoin: round;
+}
+
+.documentation__part1,
+.documentation__part2,
+.documentation__part3 {
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.documentation__part2,
+.documentation__part3 {
+  fill: none;
+  stroke: #333;
+}
+
+//bronze tier badge and ribbon
+.bronze-badge__1,
+.bronze-ribbon__part1 {
+  fill: $bronze;
+}
+
+.bronze-badge__2,
+.bronze-badge__4 {
+  fill: none;
+}
+
+.bronze-badge__3 {
+  fill: #fff;
+}
+
+.bronze-badge__4 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.bronze-ribbon__part2 {
+  fill: none;
+  stroke: #333;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+//silver tier ribbon and badge
+.silver-badge__part1,
+.silver-ribbon__part1 {
+  fill: $silver;
+}
+
+.silver-badge__part2,
+.silver-badge__part4 {
+  fill: none;
+}
+
+.silver-badge__part3 {
+  fill: #fff;
+}
+
+.silver-badge__part4 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.silver-ribbon__part2 {
+  fill: none;
+  stroke: #333;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+//gold tier ribbon and badge
+.gold-badge__part1,
+.gold-ribbon__part1 {
+  fill: $gold;
+}
+
+.gold-badge__part2,
+.gold-badge__part4 {
+  fill: none;
+}
+
+.gold-badge__part3 {
+  fill: #fff;
+}
+
+.gold-badge__part4 {
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.gold-ribbon__part2 {
+  fill: none;
+  stroke: #333;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+//custom plan diamond
+.custom-diamond__part1 {
+  fill: #003458;
+}
+
+.custom-diamond__part1,
+.custom-diamond__part3 {
+  stroke: #fff;
+}
+
+.custom-diamond__part2 {
+  fill: #fff;
+}
+
+.custom-diamond__part3 {
+  fill: none;
+  stroke-linejoin: round;
+  stroke-width: 0.75px;
+}
+
+/*****************************/
+/****** fuseREACT Icons ******/
+/*****************************/
+
+/*****************************/
+/****** seoREACT Icons *******/
+/*****************************/

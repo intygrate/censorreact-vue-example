@@ -1,0 +1,325 @@
+.censorreact-demo {
+  @extend .panel__sizing;
+  background: rgb(32, 116, 57);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(32, 116, 57, 1) 0%,
+    rgba(149, 193, 60, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(32, 116, 57, 1) 0%,
+    rgba(149, 193, 60, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(32, 116, 57, 1) 0%,
+    rgba(149, 193, 60, 1) 100%
+  );
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 90vh;
+
+  &__panel {
+    @extend .panel-l;
+    padding: 0;
+    @include box-shadow(-2px, 0px, 19px, 5px, rgba(155, 155, 155, 0.1));
+    border-radius: 2px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 10px;
+  }
+
+  &__cta {
+    @extend .panel-l;
+    @include flexbox;
+    padding: 20px 0;
+  }
+}
+
+.tab-panel {
+  @include flexbox($align-items: flex-start);
+  height: 70px;
+
+  &__tab {
+    @include flex-item($grow: 1, $shrink: 1, $basis: 30%);
+    @include flexbox($justify-content: center, $align-content: center);
+    cursor: pointer;
+    height: 80%;
+    transition: height 0.3s linear;
+    background-color: $s-colour3;
+    margin: 0 7px 0 0;
+    padding: 0 10px;
+
+    &.active {
+      height: 100%;
+    }
+  }
+
+  &--img {
+    background-color: $s-colour5;
+    margin: 0 0 0 7px;
+  }
+
+  &__icon {
+    @include flex-item($grow: 0, $shrink: 1, $basis: 40px);
+    padding: 2px;
+  }
+
+  &__title {
+    @include flex-item($grow: 0, $shrink: 1, $basis: auto);
+    text-transform: uppercase;
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 85px;
+
+    &__tab {
+      padding: 0 20px;
+    }
+
+    &__icon {
+      @include flex-item($basis: 60px);
+    }
+
+    &__title {
+      padding-left: 20px;
+    }
+  }
+}
+
+.user-input {
+  background-color: white;
+  padding: 15px;
+
+  &__inner {
+    height: 100%;
+  }
+}
+
+.demo-results {
+  background-color: white;
+  border-top: 2px solid $grey2;
+  padding: 15px;
+  text-align: left;
+  color: crimson;
+
+  &__inner {
+    background-color: $grey1;
+  }
+
+  &__result-msg {
+    padding: 10px;
+    margin: 0;
+    max-width: 100%;
+    font-size: 0.8em;
+    min-height: 100px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    @media screen and (min-width: 401px) {
+      font-size: 1em;
+      min-height: 200px;
+    }
+  }
+}
+
+.cr-demo-text {
+  text-align: left;
+
+  &__label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: $grey4;
+    position: relative;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    display: none;
+
+    &.show {
+      display: inline-block;
+    }
+  }
+
+  &__input {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 8px;
+    outline: none;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    border: 1px solid $grey3;
+    width: 100%;
+    font-family: "Montserrat", "Verdana", sans-serif;
+  }
+
+  &__textarea {
+    @extend .cr-demo-text__input;
+    resize: none;
+  }
+
+  &__stats {
+    text-align: right;
+  }
+
+  &__counter {
+    font-size: 1.3rem;
+  }
+
+  &__button {
+    background-color: $s-colour6;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    padding: 10px 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba($s-colour6, 0.9);
+    }
+  }
+}
+
+.img-test-action-button {
+  margin: 10px 5px;
+  padding: 10px 25px;
+  cursor: pointer;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Verdana", sans-serif;
+}
+
+.cr-demo-img {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  &__preview {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__preview-pic {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
+    background-color: rgba(200, 200, 200, 0.25);
+
+    &.dragging-over {
+      filter: brightness(0.5);
+    }
+  }
+
+  &__pic-inner {
+    position: relative;
+    z-index: 11;
+    pointer-events: none;
+    box-sizing: border-box;
+    margin: 1em auto;
+    padding: 0.5em;
+    border: 0.3em dashed rgba(66, 66, 66, 0.15);
+    border-radius: 4px;
+    width: calc(100% - 2.5em);
+    height: calc(100% - 2.5em);
+    display: table;
+  }
+
+  &__pic-inner-text {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  &__mod-button {
+    @extend .img-test-action-button;
+    background-color: green;
+  }
+
+  &__rem-button {
+    @extend .img-test-action-button;
+    background-color: red;
+  }
+
+  &__stats {
+    @extend .cr-demo-text__stats;
+  }
+
+  &__button {
+    @extend .cr-demo-text__button;
+  }
+}
+
+.cr-cta {
+  @extend .panel__sizing;
+  padding-left: 15px;
+  padding-right: 15px;
+  @include flex-item($grow: 1, $shrink: 0, $basis: 100%);
+  background-color: white;
+  color: $p-colour1;
+  border-radius: 2px;
+  @include box-shadow(-2px, 0px, 19px, 5px, rgba(155, 155, 155, 0.1));
+
+  &:nth-last-child(1) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  &__icon {
+    margin-top: 30px;
+  }
+
+  &__heading {
+    margin-top: 5px;
+    font-size: 2.8rem;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    max-width: 500px;
+    margin: 10px auto;
+  }
+
+  @media screen and (min-width: 501px) {
+    &__heading {
+      font-size: 3.2rem;
+    }
+  }
+
+  @media screen and (min-width: 1001px) {
+    @include flex-item($grow: 1, $basis: 200px);
+
+    &:nth-last-child(1) {
+      margin-left: 15px;
+      margin-top: 0;
+    }
+  }
+}

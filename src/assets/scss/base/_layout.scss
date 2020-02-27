@@ -1,0 +1,61 @@
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #1a1a1a;
+  font-family: "Montserrat", "Verdana", sans-serif;
+  font-size: 1.4em;
+  position: relative;
+}
+
+//panel sizing options
+.panel {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__sizing {
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+
+  &-s {
+    @extend .panel;
+    width: 570px;
+    max-width: 100%;
+  }
+
+  &-m {
+    @extend .panel;
+    width: 870px;
+    max-width: 100%;
+  }
+
+  &-l {
+    @extend .panel;
+    width: 1370px;
+    max-width: 100%;
+  }
+
+  &-xl {
+    @extend .panel;
+    max-width: 100%;
+    width: 1370px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__sizing {
+      padding-bottom: 30px;
+    }
+  }
+
+  //TODO: might be able to delete this at the end of the optimisation
+  @media screen and (min-width: 1501px) {
+    &-xl {
+      max-width: 80vw;
+      width: 100%;
+    }
+  }
+}

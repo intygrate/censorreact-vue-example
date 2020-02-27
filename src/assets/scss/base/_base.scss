@@ -1,0 +1,167 @@
+html {
+  font-size: 62.5%;
+  position: relative;
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+}
+
+div,
+nav,
+article,
+section,
+header,
+footer {
+  position: relative;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+
+//styles for the different levels of headings
+//thoughout the website
+.heading {
+  &__primary {
+    font-size: 2em;
+    font-weight: 400;
+    margin: 25px 30px;
+  }
+
+  &--white {
+    color: white;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__primary {
+      font-size: 2.5em;
+      font-weight: 400;
+      margin: 25px 30px;
+    }
+  }
+}
+
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 200px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  height: 36px;
+  line-height: 36px;
+  cursor: pointer;
+
+  &--green {
+    border-color: $s-colour6;
+    color: $s-colour6;
+
+    &:hover {
+      background-color: rgba($s-colour6, 0.1);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 48px;
+    line-height: 48px;
+    font-size: 1.3rem;
+    width: 250px;
+
+    &__primary {
+      border-radius: 24px;
+    }
+
+    &__secondary {
+      border-radius: 24px;
+    }
+
+    &__tertiary {
+      border-radius: 6px;
+    }
+
+    &__ghost {
+      border-radius: 24px;
+    }
+  }
+
+  &--small {
+    width: 200px;
+  }
+}
+
+//image responsive class, basically taken from bootstrap
+.img-rspnv {
+  max-width: 100%;
+  display: block;
+  height: auto;
+
+  &__center {
+    @extend .img-rspnv;
+    margin: 0 auto;
+  }
+}
+
+//resets all ul and ol lists
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+//resets text capitalisation for where it is
+//not needed, but already set for other items
+.case-normalise {
+  text-transform: none;
+}
+
+//scrol positioning for all the hero landing pages
+.scroll-down-position {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mobile-menu-shadow {
+  box-shadow: 0px 6px 6px rgba(51, 51, 51, 0.2);
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  width: 100%;
+  height: 1rem;
+}
+
+//correct the font for form buttons
+input[type="submit"] {
+  font-family: "Montserrat", "Verdana", sans-serif;
+}
+
+//hide file input for image uploader
+input[type="file"] {
+  display: none;
+}
